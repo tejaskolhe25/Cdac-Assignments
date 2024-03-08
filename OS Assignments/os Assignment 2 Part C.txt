@@ -1,0 +1,186 @@
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que1.sh
+#!/bin/bash
+echo "Hello, World!"
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que1.sh
+Hello, World!
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que2.sh
+#!/bin/bash
+name="CDAC Mumbai"
+echo "$name"
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que2.sh
+CDAC Mumbai
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que3.sh
+#!/bin/bash
+echo "Enter number"
+read name
+echo "The number:- $name"
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que3.sh
+Enter number
+2
+The number:- 2
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que4.sh
+#!/bin/bash
+echo "enter 1st number"
+read num1
+echo "enter 2nd number"
+read num2
+((result=$num1+$num2))
+echo "Addition of two numbers:- $result"
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que4.sh
+enter 1st number
+3
+enter 2nd number
+5
+Addition of two numbers:- 8
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que5.sh
+#!/bin/bash
+echo "Enter a number : "
+read num
+mod=$(( $num % 2 ))
+if [ $mod -eq 0 ]
+then
+echo "$num is even number"
+else
+echo "$num is odd number"
+fi
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que5.sh
+Enter a number :
+4
+4 is even number
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que6.sh
+#!/bin/bash
+for((i=1;i<=5;i++))
+do
+    echo $i
+done
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que6.sh
+1
+2
+3
+4
+5
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que7.sh
+#!/bin/bash
+i=1
+while [[ $i -le 5 ]]
+do
+        echo $i
+        let i+=1
+done
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que7.sh
+1
+2
+3
+4
+5
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que8.sh
+#!/bin/bash
+if [ -e "file3.txt" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que8.sh
+File does not exist
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que9.sh
+#!/bin/bash
+echo "enter number"
+read num
+if [ $num -gt 10 ]
+then
+        echo "NUmber is greater"
+else
+        echo "Number is less than 10"
+fi
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que9.sh
+enter number
+12
+NUmber is greater
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que10.sh
+#!/bin/bash
+for((i=1;i<=5;i++))
+do
+        for((j=1;j<=10;j++))
+        do
+                ((table=$i*$j))
+                echo "$i X $j = $table"
+        done
+done
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que10.sh
+1 X 1 = 1
+1 X 2 = 2
+1 X 3 = 3
+1 X 4 = 4
+1 X 5 = 5
+1 X 6 = 6
+1 X 7 = 7
+1 X 8 = 8
+1 X 9 = 9
+1 X 10 = 10
+2 X 1 = 2
+2 X 2 = 4
+2 X 3 = 6
+2 X 4 = 8
+2 X 5 = 10
+2 X 6 = 12
+2 X 7 = 14
+2 X 8 = 16
+2 X 9 = 18
+2 X 10 = 20
+3 X 1 = 3
+3 X 2 = 6
+3 X 3 = 9
+3 X 4 = 12
+3 X 5 = 15
+3 X 6 = 18
+3 X 7 = 21
+3 X 8 = 24
+3 X 9 = 27
+3 X 10 = 30
+4 X 1 = 4
+4 X 2 = 8
+4 X 3 = 12
+4 X 4 = 16
+4 X 5 = 20
+4 X 6 = 24
+4 X 7 = 28
+4 X 8 = 32
+4 X 9 = 36
+4 X 10 = 40
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+5 X 5 = 25
+5 X 6 = 30
+5 X 7 = 35
+5 X 8 = 40
+5 X 9 = 45
+5 X 10 = 50
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ cat que11.sh
+#!/bin/bash
+
+while [ true ];
+do
+        echo "enter number"
+        read n
+
+        if [ $n -lt 0 ]
+        then
+                break;
+        else
+                ((square=$n*$n))
+                echo "square of $n = $square"
+        fi
+done
+
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$ ./que11.sh
+enter number
+4
+square of 4 = 16
+enter number
+6
+square of 6 = 36
+enter number
+-1
+tejaskolhe@DESKTOP-B3D9QU3:~/SScript$
