@@ -1,0 +1,383 @@
+tejaskolhe@DESKTOP-B3D9QU3:~$ ls
+LinuxAssignment  SScript  Tejas  demo.sh  family  que1.sh  snap
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ echo "Hello, World"
+Hello, World
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ touch file.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+data.txt  docs  docs.zip  docs1  duplicate.txt  file.txt  file1.txt  input.txt  numbers.txt  output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -a
+.  ..  data.txt  docs  docs.zip  docs1  duplicate.txt  file.txt  file1.txt  input.txt  numbers.txt  output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ rm file.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+data.txt  docs  docs.zip  docs1  duplicate.txt  file1.txt  input.txt  numbers.txt  output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt
+Tejas kolhe
+CDAC student
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cp file1.txt file2.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+data.txt  docs  docs.zip  docs1  duplicate.txt  file1.txt  file2.txt  input.txt  numbers.txt  output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+Tejas kolhe
+CDAC student
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ mv file1.txt Tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd Tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/Tejas$ ls
+user1  user2
+tejaskolhe@DESKTOP-B3D9QU3:~/Tejas$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ mv file1.txt Tejas
+mv: cannot stat 'file1.txt': No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -l
+total 40
+-rw-r--r-- 1 tejaskolhe tejaskolhe   25 Mar  7 20:01 Tejas
+-rw-r--r-- 1 tejaskolhe tejaskolhe  328 Mar  7 20:30 data.txt
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar  7 19:12 docs
+-rw-r--r-- 1 tejaskolhe tejaskolhe  647 Mar  7 19:46 docs.zip
+drwxr-xr-x 3 tejaskolhe tejaskolhe 4096 Mar  7 19:50 docs1
+-rw-r--r-- 1 tejaskolhe tejaskolhe   24 Mar  7 20:44 duplicate.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   25 Mar 10 22:20 file2.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:34 input.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   54 Mar  7 20:32 numbers.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:43 output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ chmod 755 file2.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -l
+total 40
+-rw-r--r-- 1 tejaskolhe tejaskolhe   25 Mar  7 20:01 Tejas
+-rw-r--r-- 1 tejaskolhe tejaskolhe  328 Mar  7 20:30 data.txt
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar  7 19:12 docs
+-rw-r--r-- 1 tejaskolhe tejaskolhe  647 Mar  7 19:46 docs.zip
+drwxr-xr-x 3 tejaskolhe tejaskolhe 4096 Mar  7 19:50 docs1
+-rw-r--r-- 1 tejaskolhe tejaskolhe   24 Mar  7 20:44 duplicate.txt
+-rwxr-xr-x 1 tejaskolhe tejaskolhe   25 Mar 10 22:20 file2.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:34 input.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   54 Mar  7 20:32 numbers.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:43 output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+Tejas kolhe
+CDAC student
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat >file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat >> file2.txt
+Tejas
+Kolhe
+kolhe
+^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+Tejas
+Kolhe
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ grep "Tejas" file2.txt
+Tejas
+Tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ grep -c "Tejas" file2.txt
+2
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ grep -w "Tejas" file2.txt
+Tejas
+Tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ kill -l
+ 1) SIGHUP       2) SIGINT       3) SIGQUIT      4) SIGILL       5) SIGTRAP
+ 6) SIGABRT      7) SIGBUS       8) SIGFPE       9) SIGKILL     10) SIGUSR1
+11) SIGSEGV     12) SIGUSR2     13) SIGPIPE     14) SIGALRM     15) SIGTERM
+16) SIGSTKFLT   17) SIGCHLD     18) SIGCONT     19) SIGSTOP     20) SIGTSTP
+21) SIGTTIN     22) SIGTTOU     23) SIGURG      24) SIGXCPU     25) SIGXFSZ
+26) SIGVTALRM   27) SIGPROF     28) SIGWINCH    29) SIGIO       30) SIGPWR
+31) SIGSYS      34) SIGRTMIN    35) SIGRTMIN+1  36) SIGRTMIN+2  37) SIGRTMIN+3
+38) SIGRTMIN+4  39) SIGRTMIN+5  40) SIGRTMIN+6  41) SIGRTMIN+7  42) SIGRTMIN+8
+43) SIGRTMIN+9  44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47) SIGRTMIN+13
+48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52) SIGRTMAX-12
+53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9  56) SIGRTMAX-8  57) SIGRTMAX-7
+58) SIGRTMAX-6  59) SIGRTMAX-5  60) SIGRTMAX-4  61) SIGRTMAX-3  62) SIGRTMAX-2
+63) SIGRTMAX-1  64) SIGRTMAX
+
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt
+Hello, World!
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment/mydir$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -l | grep ".txt"
+-rw-r--r-- 1 tejaskolhe tejaskolhe  328 Mar  7 20:30 data.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   24 Mar  7 20:44 duplicate.txt
+-rwxr-xr-x 1 tejaskolhe tejaskolhe   42 Mar 10 22:52 file2.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:34 input.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   54 Mar  7 20:32 numbers.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:43 output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.xt
+cat: file1.xt: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+Tejas
+Kolhe
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$  cat > file1.xt
+2
+3
+1
+8
+6
+4
+^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt
+cat: file1.txt: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+Tejas  data.txt  docs  docs.zip  docs1  duplicate.txt  file1.xt  file2.txt  input.txt  mydir  numbers.txt  output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat > file1.txt
+5
+6
+4
+3
+2
+1^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat  file1.txt
+5
+6
+4
+3
+2
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+Tejas
+Kolhe
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt |sort|uniq
+2
+3
+4
+5
+6
+Kolhe
+Tejas
+kolhe
+tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file1.txt |sort|uniq
+2
+3
+4
+5
+6
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat >> file1.txt
+2
+1
+6
+7
+7
+3
+9
+
+2
+^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt |sort|uniq
+
+1
+2
+3
+4
+5
+6
+7
+9
+Kolhe
+Tejas
+kolhe
+tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -l | grep "^d"
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar  7 19:12 docs
+drwxr-xr-x 3 tejaskolhe tejaskolhe 4096 Mar  7 19:50 docs1
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar 10 23:05 mydir
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat > file3.txt
+Kolhe
+Tejas
+tejas
+^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ grep -r "Tejas" LinuxAssignment
+grep: LinuxAssignment: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ grep -r "Tejas" tejaskolhe
+grep: tejaskolhe: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~$ grep -r "Tejas" LinuxAssignment
+LinuxAssignment/Tejas:Tejas kolhe
+LinuxAssignment/file2.txt:Tejas
+LinuxAssignment/file2.txt:Tejas
+LinuxAssignment/file3.txt:Tejas
+LinuxAssignment/docs/file2.txt:Hey Tejas here
+LinuxAssignment/docs1/docs/file2.txt:Hey Tejas here
+grep: LinuxAssignment/docs.zip: binary file matches
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt | sort | uniq –d
+uniq: –d: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+Tejas     docs      docs1          file1.txt  file3.txt  mydir        output.txt
+data.txt  docs.zip  duplicate.txt  file2.txt  input.txt  numbers.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt | sort | uniq
+
+1
+2
+3
+4
+5
+6
+7
+9
+Kolhe
+Tejas
+kolhe
+tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ cat file1.txt file2.txt | sort | uniq -d
+cat: file1.txt: No such file or directory
+cat: file2.txt: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~$ cat file2.txt
+cat: file2.txt: No such file or directory
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+Tejas
+Kolhe
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat >> file2.txt
+tejas tejas tejas
+kolhe kolhe
+yes
+no no ^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt | sort | uniq -d
+2
+3
+6
+7
+Kolhe
+Tejas
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat >> file2.txt
+no
+no
+no^C
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt | sort | uniq -d
+2
+3
+6
+7
+Kolhe
+Tejas
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file2.txt
+tejas
+Tejas
+Kolhe
+kolhe
+Tejas
+Kolhe
+kolhe
+tejas tejas tejas
+kolhe kolhe
+yes
+no
+no
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file1.txt file2.txt | sort | uniq -d
+2
+3
+6
+7
+Kolhe
+Tejas
+kolhe
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cat file3.txt file2.txt | sort | uniq -d
+Kolhe
+Tejas
+kolhe
+tejas
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ chmod 644 file2.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls -l
+total 52
+-rw-r--r-- 1 tejaskolhe tejaskolhe   25 Mar  7 20:01 Tejas
+-rw-r--r-- 1 tejaskolhe tejaskolhe  328 Mar  7 20:30 data.txt
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar  7 19:12 docs
+-rw-r--r-- 1 tejaskolhe tejaskolhe  647 Mar  7 19:46 docs.zip
+drwxr-xr-x 3 tejaskolhe tejaskolhe 4096 Mar  7 19:50 docs1
+-rw-r--r-- 1 tejaskolhe tejaskolhe   24 Mar  7 20:44 duplicate.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   27 Mar 10 23:15 file1.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   83 Mar 10 23:27 file2.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   18 Mar 10 23:20 file3.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:34 input.txt
+drwxr-xr-x 2 tejaskolhe tejaskolhe 4096 Mar 10 23:05 mydir
+-rw-r--r-- 1 tejaskolhe tejaskolhe   54 Mar  7 20:32 numbers.txt
+-rw-r--r-- 1 tejaskolhe tejaskolhe   12 Mar  7 20:43 output.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ ls
+Tejas     docs      docs1          file1.txt  file3.txt  mydir        output.txt
+data.txt  docs.zip  duplicate.txt  file2.txt  input.txt  numbers.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ mkdir Linux
+tejaskolhe@DESKTOP-B3D9QU3:~$ cp -r LinuxAssignment Linux
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd Linux
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux$ ls
+LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ ls
+Linux  LinuxAssignment  SScript  Tejas  demo.sh  family  que1.sh  snap
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd Linux
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux/LinuxAssignment$ ls
+Tejas     docs      docs1          file1.txt  file3.txt  mydir        output.txt
+data.txt  docs.zip  duplicate.txt  file2.txt  input.txt  numbers.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux/LinuxAssignment$ cd ../
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux$ cd ./
+tejaskolhe@DESKTOP-B3D9QU3:~/Linux$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd ..
+tejaskolhe@DESKTOP-B3D9QU3:/home$  find tejaskolhe -name "*.txt"
+tejaskolhe/family/madhukar/Mukesh/prateek.txt
+tejaskolhe/LinuxAssignment/numbers.txt
+tejaskolhe/LinuxAssignment/file2.txt
+tejaskolhe/LinuxAssignment/output.txt
+tejaskolhe/LinuxAssignment/file3.txt
+tejaskolhe/LinuxAssignment/file1.txt
+tejaskolhe/LinuxAssignment/data.txt
+tejaskolhe/LinuxAssignment/docs/sample1.txt
+tejaskolhe/LinuxAssignment/docs/file2.txt
+tejaskolhe/LinuxAssignment/docs/demo1.txt
+tejaskolhe/LinuxAssignment/docs1/docs/sample1.txt
+tejaskolhe/LinuxAssignment/docs1/docs/file2.txt
+tejaskolhe/LinuxAssignment/docs1/docs/demo1.txt
+tejaskolhe/LinuxAssignment/mydir/file.txt
+tejaskolhe/LinuxAssignment/duplicate.txt
+tejaskolhe/LinuxAssignment/input.txt
+tejaskolhe/Linux/LinuxAssignment/numbers.txt
+tejaskolhe/Linux/LinuxAssignment/file2.txt
+tejaskolhe/Linux/LinuxAssignment/output.txt
+tejaskolhe/Linux/LinuxAssignment/file3.txt
+tejaskolhe/Linux/LinuxAssignment/file1.txt
+tejaskolhe/Linux/LinuxAssignment/data.txt
+tejaskolhe/Linux/LinuxAssignment/docs/sample1.txt
+tejaskolhe/Linux/LinuxAssignment/docs/file2.txt
+tejaskolhe/Linux/LinuxAssignment/docs/demo1.txt
+tejaskolhe/Linux/LinuxAssignment/docs1/docs/sample1.txt
+tejaskolhe/Linux/LinuxAssignment/docs1/docs/file2.txt
+tejaskolhe/Linux/LinuxAssignment/docs1/docs/demo1.txt
+tejaskolhe/Linux/LinuxAssignment/mydir/file.txt
+tejaskolhe/Linux/LinuxAssignment/duplicate.txt
+tejaskolhe/Linux/LinuxAssignment/input.txt
+tejaskolhe@DESKTOP-B3D9QU3:/home$ cd
+tejaskolhe@DESKTOP-B3D9QU3:~$ cd LinuxAssignment
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ chmod u+x file2.txt
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/Tejas Kolhe/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk1.8.0_202/bin:/snap/bin
+tejaskolhe@DESKTOP-B3D9QU3:~/LinuxAssignment$
